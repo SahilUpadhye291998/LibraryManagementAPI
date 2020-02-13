@@ -21,12 +21,6 @@ let Books = mongoose.Schema({
             type: String,
             required : true
         }
-    }],
-    students: [{
-        student:{
-            type: mongoose.Schema.Types.ObjectId,
-            ref: 'student'
-        }
     }]
 });
 

@@ -24,7 +24,13 @@ let Students = mongoose.Schema({
     date:{
         type: Date,
         default: Date.now
-    }
+    },
+    books: [{
+        student:{
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'books'
+        }
+    }]
 });
 
 module.exports = Students = mongoose.model('students', Students);
